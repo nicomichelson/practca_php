@@ -2,7 +2,7 @@
     
     require 'vendor/autoload.php';
 
-    //use
+    //use hola
     use App\Cliente;
     use App\Detalle;
     
