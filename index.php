@@ -2,6 +2,7 @@
     
     require 'vendor/autoload.php';
 
+    //use
     use App\Cliente;
     use App\Detalle;
     
