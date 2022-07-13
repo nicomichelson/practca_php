@@ -45,6 +45,15 @@
             
         }
 
+        public function retirar(int $cantidad)
+        {
+            if(($this->cantidad - $cantidad) < 0 ){
+                $this->cantidad = 0;
+            }else{
+                $this->cantidad -= $cantidad;
+            }
+        }
+
         public function mostrar(){
             return "el saldo es de: " . $this->cantidad;
         }

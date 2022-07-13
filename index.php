@@ -17,7 +17,8 @@
    $cuenta3->ingresar(1000);
 
    echo  "<br>" .$cuenta3->mostrar() . "<br>". $cuenta3;
-
+   $cuenta3->retirar(0);
+   echo  "<br> " .$cuenta3->mostrar() . "<br>". $cuenta3;
 
 
 ?>
