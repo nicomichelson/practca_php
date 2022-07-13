@@ -1,35 +1,23 @@
 <?php 
-    
+    //mostrar errores
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
     require 'vendor/autoload.php';
 
     //use hola
     use App\Cliente;
     use App\Detalle;
-    
-//    function mi_autoload($clase)
-//     {
-//         // echo $clase;
-//         $partes = explode('\\', $clase);
+    use App\Cuenta;
 
-//         echo '<br>';
-//         echo '<br>';
-        
-//         require __DIR__ . "/clases/".$partes[1].".php";
-//         // echo "intentando cargar $clase. \n";
-//         // throw new Exception("Imposible cargar $clase.");
-        
-//     }
+   $cuenta1 = new Cuenta("NIco",0);
+   $cuenta3 = new Cuenta("NIco",200);
+   $cuenta3 = new Cuenta("NIco",300);
+   $cuenta3->ingresar(1000);
 
-//    spl_autoload_register('mi_autoload');
-   
-   $detalle = new Detalle();
-   $clientes = new Cliente();
-//    try{
-//         $detalle = new Detalle();
-//     }catch (Exception $e) {
-//         echo $e->getMessage(), "\n";
-//     }   
+   echo  "<br>" .$cuenta3->mostrar() . "<br>". $cuenta3;
 
-//    var_dump('hola');
+
 
 ?>
